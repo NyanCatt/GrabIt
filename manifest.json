@@ -1,0 +1,22 @@
+/*{
+  "name": "Getting Started Example",
+  "version": "1.0",
+  "description": "Build an Extension!",
+  "manifest_version": 2
+}*/
+
+{
+  "manifest_version": 2,
+  "name": "GrabIt!",
+  "version": "1.0",
+  "chrome_url_overrides" : {
+    "newtab": "templates/login.html"
+  },
+  "background": {
+    "scripts": [
+      "static/signUp.js",
+      "static/login.js",
+      "background.js"
+    ]
+  }
+}

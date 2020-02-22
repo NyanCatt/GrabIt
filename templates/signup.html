@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GrabIt: SignUp</title>
+<link rel="stylesheet" type="text/css" href="../static/style.css">
+<style>
+
+.wrap_SignUp {
+	width: 100%;
+	height: 600px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.wrap_SignUp p {
+	text-align: center;
+}
+	
+
+</style>
+</head>
+<body>
+
+<div class="wrap_SignUp">
+
+<form class="js-signUp">
+	<p class="grabit_Logo font1"><font style="color: #2c786c;"><a href="#">Grab</font>It</a></p>
+	<p><input type="text" class="input" name="usernameInput" placeholder="USERNAME"></p>
+	<p><input type="password" class="input" name="passwordInput" placeholder="PASSWORD"></p>
+	<p><input type="password" class="input" name="passwordCheck" placeholder="CONFIRM PASSWORD"></p>
+	<p><input type="text" class="input" name="emailInput" placeholder="EMAIL ADDRESS"></p>
+	<p style="margin-top: 30px;">
+		<input type="submit" class="btn btn_ColorGreen" style="margin-right: 10px;" value="Sign Up">
+		<input type="reset" class="btn btn_ColorWhite" value="Cancel">
+	</p>
+</form>
+	
+</div>
+
+<script src="../static/signUp.js"></script>
+<script type="text/javascript"></script>
+	
+</body>
+</html>

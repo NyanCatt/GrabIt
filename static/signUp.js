@@ -1,19 +1,20 @@
 const signUpForm = document.querySelector('.js-signUp');
 
 
-function signUpSubmit() {
-	console.log('AJAX 통신 준비 중');
-
+function signUpSubmit(username, password, email) {
+	const usernameSignUp = username.value;
+	const passwordSignUp = password.value;
+	const emailSignUp = email.value;
+	
 	/* PYTHON
 	$.ajax({
-		url: '',
+		url: '/signin',
 		type: 'POST',
-		data: {},
+		data: { username: usernameSignUp, password: passwordSignUp, emailadd: emailSignUp },
 		success: function(response){
-			console.log(response);
-		    //if(response['result'] == 'success'){
-
-		    //}
+		    if(response['result'] == 'success'){
+		    	alert('회원가입 성공!');
+		    }
 		}
 
 	});*/
@@ -40,7 +41,7 @@ function checkInput(event) {
 			alert('Please confirm your password.');
 			return false;
 		} else{
-			signUpSubmit();
+			signUpSubmit(usernameInput, passwordInput, emailInput);
 			return true;
 		}
 	}

@@ -7,19 +7,20 @@ function openSignUp(event) {
 	return false;
 }
 
-function loginSubmit() {
-	console.log('AJAX 통신 준비 중');
+function loginSubmit(username, password) {
+	
+	const userId = username.value;
+	const userPassword = password.value;
 
 	/*	PYTHON
 	$.ajax({
-		url: '',
+		url: '/login',
 		type: 'POST',
-		data: {},
+		data: { username: userId, password: userPassword },
 		success: function(response){
-			console.log(response);
-		    //if(response['result'] == 'success'){
-
-		    //}
+		    if(response['result'] == 'success'){
+		    	alert('로그인 성공!');
+		    } 
 		}
 
 	});*/
@@ -35,7 +36,7 @@ function submitLogin(event) {
 		alert('Please fill in your username and password.');
 		return false;
 	} else {
-		loginSubmit();
+		loginSubmit(username, password);
 		return true;
 	}
 }
